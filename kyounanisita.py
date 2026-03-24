@@ -31,5 +31,6 @@ if st.button("何がでるかな？？"):
     r = choice(["happy","大吉","おめでとう！"])
     st.write(r)
 if st.button("おしてみてね"):
-    st.balloons()    
+    st.balloons() 
+        
     st.write ( "あしたもがんばろうね☆")
