@@ -1,20 +1,7 @@
-import streamlit as st
-
-st.title('Image Background')
-
-image = 'kyounanisita.png'
-
-css = f'''
-<style>
-    .stApp {{
-        background-image: url({image});
-        background-size: cover;
-        background-position: center;
-        background-color:hsla(0, 0%, 100%, 0.88);
-    }}
-    .stApp > header {{
-        background-color: white;
-    }}
-</style>
-'''
-st.markdown(css, unsafe_allow_html=True)
+[theme]
+base="light"
+primaryColor="#F39C12"
+backgroundColor="#d7ee0dff"
+secondaryBackgroundColor="#23a162ff"
+textColor="#FFFFFF"
+font="sans serif"
