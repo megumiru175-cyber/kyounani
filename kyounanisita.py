@@ -10,7 +10,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown("<h2 style = 'color:blue;'>st.title(これができたよ！！)</h2>",
+st.markdown("<h2 style = 'color:blue;'>これができたよ！！</h2>",
             unsafe_allow_html=True
 )
    
