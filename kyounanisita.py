@@ -30,4 +30,6 @@ st.write ( "そんなすごい人には、プレゼントがあるよ🎁")
 if st.button("何がでるかな？？"):
     r = choice(["happy","大吉","おめでとう！"])
     st.write(r)
+    if st.button("Send balloons!"):
+    st.balloons()    
     st.write ( "あしたもがんばろうね☆")
