@@ -1,5 +1,10 @@
 import streamlit as st # type: ignore
 from random import choice
+
+st.markdown("<h2 style = 'color:blue;'>ao</h2>",
+            unsafe_allow_html=True
+)
+   
 st.title('今日はこれができたよ！！')
 st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
