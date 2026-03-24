@@ -15,7 +15,7 @@ st.markdown("<h2 style = 'color:blue;'>これができたよ！！</h2>",
             unsafe_allow_html=True
 )
  file_path = st.file_uploader('', type=['png', 'jpg', 'jpeg'])
-img = Image.open(file_path)
+img = Image.open('kyounaniga.png')
 st.image(img)  
 st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
