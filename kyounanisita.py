@@ -10,11 +10,10 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown("<h2 style = 'color:blue;'>今日はこれができたよ！！</h2>",
+st.markdown("<h2 style = 'color:blue;'>st.title('今日はこれができたよ！！')</h2>",
             unsafe_allow_html=True
 )
    
-st.title('今日はこれができたよ！！')
 st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
 
