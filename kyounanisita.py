@@ -1,4 +1,5 @@
 import streamlit as st # type: ignore
+from PIL import Image
 from random import choice
 st.markdown(
     """
@@ -13,7 +14,9 @@ st.markdown(
 st.markdown("<h2 style = 'color:blue;'>これができたよ！！</h2>",
             unsafe_allow_html=True
 )
-   
+ file_path = st.file_uploader('', type=['png', 'jpg', 'jpeg'])
+img = Image.open(file_path)
+st.image(img)  
 st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
 
