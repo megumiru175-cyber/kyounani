@@ -1,0 +1,20 @@
+import streamlit as st
+
+st.title('Image Background')
+
+image = '/kyounani/static/image.png'
+
+css = f'''
+<style>
+    .stApp {{
+        background-image: url({image});
+        background-size: cover;
+        background-position: center;
+        background-color:rgba(255, 255, 255, 0.83);
+    }}
+    .stApp > header {{
+        background-color: transparent;
+    }}
+</style>
+'''
+st.markdown(css, unsafe_allow_html=True)
