@@ -13,7 +13,7 @@ st.markdown(
 )
 st.markdown("<h2 style = 'color:blue;'>( *´艸｀)これができたよ！！( ..)φメモメモ</h2>",
             unsafe_allow_html=True)
-st.subheader('やらなくてはいけないことたくさんあるよね(*'□'*)\n'
+st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
 
 #name
