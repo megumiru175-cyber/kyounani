@@ -12,7 +12,6 @@ st.markdown(
 )
 st.markdown("<h2 style = 'color:blue;'>これができたよ！！</h2>",
             unsafe_allow_html=True)
-url("https://drive.google.com/file/d/1dt46pDdpV5K5h2nnzoNEgoocEf-bLlRN/view?usp=sharing")
 st.subheader('やらなくてはいけないことたくさんあるよね\n'
         'それをひとつずつやってしまうおてつだいをするよ')
 
