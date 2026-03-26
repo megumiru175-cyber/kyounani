@@ -19,8 +19,8 @@ st.markdown("<h2 style = 'color:blue;'>今日はこれができたよ！！'</h2
             unsafe_allow_html=True
 )
 
-st.markdown("<h3 style = 'color:black;'>やらなくてはいけないことたくさんあるよね。" \
-"それをひとつずつやってしまうおてつだいをするよ')</h3>")
+st.markdown("やらなくてはいけないことたくさんあるよね。" \
+"それをひとつずつやってしまうおてつだいをするよ!")
 
 #name
 name = st.text_input('名前をいれてね٩꒰｡•◡•｡꒱۶')
