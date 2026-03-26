@@ -22,3 +22,7 @@ if uploaded_file is not None:
     # テーブルの表示
     st.write("### 今までのがんばり")
     st.write(df)
+
+st.title('Bar Chart')
+# 棒グラフを表示
+st.bar_chart(data, x='category', y='value')
