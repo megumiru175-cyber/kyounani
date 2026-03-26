@@ -20,7 +20,7 @@ st.markdown("<h2 style = 'color:blue;'>今日はこれができたよ！！'</h2
 )
 
 st.markdown("<h3 style = 'color:black;'>やらなくてはいけないことたくさんあるよね。" \
-"それをひとつずつやってしまうおてつだいをするよ')</h3>"git),
+"それをひとつずつやってしまうおてつだいをするよ')</h3>")
 
 #name
 name = st.text_input('名前をいれてね٩꒰｡•◡•｡꒱۶')
@@ -49,4 +49,4 @@ if st.button("何がでるかな？？"):
     st.write(r)
 if st.button("おしてみてね"):
         st.balloons() 
-    st.write ( "あしたもがんばろうね(๑•̀ㅂ•́)و✧")
+st.write ( "あしたもがんばろうね(๑•̀ㅂ•́)و✧")
