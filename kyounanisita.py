@@ -6,18 +6,21 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #ffff00;
+        background-color: #00fa9a;
+        
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+
 st.markdown("<h2 style = 'color:blue;'>今日はこれができたよ！！'</h2>",
             unsafe_allow_html=True
 )
-   
-st.subheader('やらなくてはいけないことたくさんあるよね\n'
-        'それをひとつずつやってしまうおてつだいをするよ')
+
+st.markdown("<h3 style = 'color:black;'>やらなくてはいけないことたくさんあるよね。" \
+"それをひとつずつやってしまうおてつだいをするよ')</h3>"git),
 
 #name
 name = st.text_input('名前をいれてね٩꒰｡•◡•｡꒱۶')
@@ -44,6 +47,6 @@ st.write ( "そんなすごい人には、プレゼントがあるよ🎁")
 if st.button("何がでるかな？？"):
     r = choice(["happy","大吉","おめでとう！",""])
     st.write(r)
-    if st.button("おしてみてね"):
+if st.button("おしてみてね"):
         st.balloons() 
     st.write ( "あしたもがんばろうね(๑•̀ㅂ•́)و✧")
