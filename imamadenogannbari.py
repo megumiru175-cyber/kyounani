@@ -1,5 +1,16 @@
 import streamlit as st
 import pandas as pd
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #00fa9a;
+        
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # CSVファイルのアップロード
 uploaded_file = st.file_uploader("CSVファイルをアップロードしてください", type=["csv"])
