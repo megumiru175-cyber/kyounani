@@ -1,16 +1,5 @@
 import streamlit as st
 import pandas as pd
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #00fa9a;
-        
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # CSVファイルのアップロード
 uploaded_file = st.file_uploader("CSVファイルをアップロードしてください", type=["csv"])
@@ -23,6 +12,10 @@ if uploaded_file is not None:
     st.write("### 今までのがんばり")
     st.write(df)
 
-st.title('Bar Chart')
-# 棒グラフを表示
-st.bar_chart(data, x='category', y='value')
+    st.title('Bar Chart')
+
+    # 棒グラフを表示
+    st.bar_chart(df, x='category', y='value')
+
+else:
+    st.info("CSVファイルをアップロードすると棒グラフが表示されます。")
