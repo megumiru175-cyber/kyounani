@@ -1,22 +1,53 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 
 uploaded_file = st.file_uploader("CSVファイルをアップロードしてください", type=["csv"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 
-    st.write("### 今までのがんばり")
+    st.write("### 今までのがんばり（元データ）")
     st.write(df)
 
-    st.write("#### 列名:", list(df.columns))
+    # ---------------------------------------
+    # すべての列を縦にしてタスク一覧にする
+    # ---------------------------------------
+    value_columns = df.columns[1:]
 
-    st.title('Bar Chart')
+    melted = df.melt(id_vars='日にち', value_vars=value_columns, value_name='task')
+    melted = melted.dropna(subset=['task'])
+    melted['task'] = melted['task'].str.strip()
 
-    # ✨ 列名が存在するかチェック
-    if 'category' in df.columns and 'value' in df.columns:
-        st.bar_chart(df, x='category', y='value')
-    else:
-        st.error("📛 CSV に 'category' または 'value' 列がありません。上の列名を確認して指定してください。")
+    # タスクごとの集計
+    count_data = melted['task'].value_counts().reset_index()
+    count_data.columns = ['category', 'value']
+
+    st.write("### 種類ごとの回数")
+    st.write(count_data)
+
+    # ---------------------------------------
+    # 棒グラフ
+    # ---------------------------------------
+    st.title("棒グラフ（がんばりの回数）")
+    st.bar_chart(count_data, x='category', y='value')
+
+    # ---------------------------------------
+    # 円グラフ
+    # ---------------------------------------
+    st.title("円グラフ（がんばりの割合）")
+
+    fig, ax = plt.subplots()
+    ax.pie(
+        count_data['value'],
+        labels=count_data['category'],
+        autopct='%1.1f%%',
+        startangle=90
+    )
+    ax.axis('equal')  # 円を丸く表示
+
+    st.pyplot(fig)
+
 else:
-    st.info("CSVファイルをアップロードすると棒グラフが表示されます。")
+    st.info("CSVファイルをアップロードすると分析グラフが表示されます。")
+    
